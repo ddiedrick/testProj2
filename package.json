@@ -6,8 +6,8 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "start": "node server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && cd frontend && npm install && npm run start"
+    "start": "npm run server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && cd frontend && npm install && npm run client"
   },
   "author": "",
   "license": "ISC",
