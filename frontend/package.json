@@ -17,5 +17,8 @@
     "socket.io": "^4.7.1",
     "socket.io-client": "^4.7.1"
   },
+  "engines": {
+    "node": "18.16.0"
+  },
   "proxy": "http://localhost:5001"
 }
