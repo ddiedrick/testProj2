@@ -130,7 +130,7 @@ app.post("/login", async (req, res) => {
 
       // Send a POST request to the API endpoint
       const response = await fetch(
-        "http://127.0.0.1:5000/api/messenger/user-login",
+        "http://127.0.0.1:5001/api/messenger/user-login",
         {
           method: "POST",
           body: JSON.stringify({ username, password }),
@@ -176,7 +176,7 @@ app.get("/chat", async (req, res) => {
     };
 
     const response = await fetch(
-      "http://127.0.0.1:5000/api/messenger/get-friends",
+      "http://127.0.0.1:5001/api/messenger/get-friends",
       requestOptions
     );
 
@@ -220,7 +220,7 @@ app.post("/partial", async (req, res) => {
 
   const response = await fetch(
     //get all the messages from the DB for this user and receiver
-    "http://localhost:5000/api/messenger/get-message",
+    "http://localhost:5001/api/messenger/get-message",
     {
       method: "POST",
       body: JSON.stringify(data),
@@ -295,7 +295,7 @@ app.post("/sendMessage", async (req, res) => {
     let myUserID = req.body.loggedinUserID;
 
     const response = await fetch(
-      "http://localhost:5000/api/messenger/send-message",
+      "http://localhost:5001/api/messenger/send-message",
       {
         method: "POST",
         body: JSON.stringify(req.body),

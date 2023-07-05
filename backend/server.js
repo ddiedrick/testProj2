@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 const authRouter = require("./routes/authRoute");
 const messageRouter = require("./routes/messengerRoute");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 app.use("/api/messenger", authRouter);
 app.use("/api/messenger", messageRouter);
