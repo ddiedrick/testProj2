@@ -54,7 +54,7 @@ const signupFormHandler = async (event) => {
   if (username && email && user_password) {
     try {
       const response = await fetch(
-        "http://localhost:5001/api/messenger/user-register",
+        "https://messengerapp-1f013df24dcb.herokuapp.com/api/messenger/user-register",
         {
           method: "POST",
           body: JSON.stringify({ username, email, user_password }),

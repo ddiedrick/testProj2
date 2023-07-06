@@ -130,7 +130,7 @@ app.post("/login", async (req, res) => {
 
       // Send a POST request to the API endpoint
       const response = await fetch(
-        "http://127.0.0.1:5001/api/messenger/user-login",
+        "https://messengerapp-1f013df24dcb.herokuapp.com/api/messenger/user-login",
         {
           method: "POST",
           body: JSON.stringify({ username, password }),
@@ -176,7 +176,7 @@ app.get("/chat", async (req, res) => {
     };
 
     const response = await fetch(
-      "http://127.0.0.1:5001/api/messenger/get-friends",
+      "https://messengerapp-1f013df24dcb.herokuapp.com/api/messenger/get-friends",
       requestOptions
     );
 
