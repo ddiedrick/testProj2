@@ -6,7 +6,7 @@ const handlebars = require("express-handlebars");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
 const { left } = require("inquirer/lib/utils/readline");
-export const socket= io("https://messengerapp-1f013df24dcb.herokuapp.com/");
+//export const socket= io("https://messengerapp-1f013df24dcb.herokuapp.com/");
 const utilhelpers = require("./utils/helpers");
 
 const app = express();
