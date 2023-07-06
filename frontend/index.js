@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+const socket= io("https://messengerapp-1f013df24dcb.herokuapp.com/");
 //Sets our app to use the handlebars engine
 app.set("view engine", "handlebars");
 //Sets handlebars configurations (we will go through them later on)
