@@ -176,7 +176,7 @@ app.get("/chat", async (req, res) => {
     };
 
     const response = await fetch(
-      "https://messengerapp-1f013df24dcb.herokuapp.com/api/messenger/get-friends",
+      "http://127.0.0.1:5001/api/messenger/get-friends",
       requestOptions
     );
 
