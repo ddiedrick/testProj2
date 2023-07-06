@@ -37,7 +37,7 @@ module.exports.userRegister = async (req, res) => {
     } else {
       res.status(400).json({
         error: {
-          message: "User registeration failed.",
+          message: "User registration failed.",
         },
       });
     }

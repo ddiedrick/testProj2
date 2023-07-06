@@ -69,7 +69,7 @@ io.on("connection", (socket) => {
     console.log("User found", user);
     //if user is active then send it to that active user
     if (user !== undefined && user.length > 0) {
-      socket.to(user[0].socketId).emit("getMessage", {
+      socket.to(user.socketId).emit("getMessage", {
         senderId: messagedata.senderId,
         sendername: messagedata.sendername,
         receiverID: messagedata.receiverID,
@@ -77,14 +77,14 @@ io.on("connection", (socket) => {
         createdAt: messagedata.time,
       });
     }
-    console.log("Scoket message send to", user[0].socketId, messagedata);
+    console.log("Scoket message send to", user.socketId, messagedata);
   });
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
     removeUser(socket.id);
     io.emit("getUser", users);
-    console.log("After discconect users:", users);
+    console.log("After disconnect users:", users);
   });
 });
 
